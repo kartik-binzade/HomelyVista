@@ -1,0 +1,278 @@
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Responsive typography */
+html {
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+/* Container styling */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Top Navigation */
+.top-nav {
+  padding: 1rem 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Change background color when scrolling */
+body.scrolling .top-nav {
+  background-color: rgb(3, 0, 0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#logo {
+  text-decoration: none;
+}
+
+/* Navbar */
+nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin-right: -1.5rem;
+  /* Add negative margin to space out social media icons */
+}
+
+nav a {
+  color: #000000;
+  text-decoration: none;
+  font-weight: 600;
+  margin-right: 1.5rem;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #3b82f6;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #3b82f6;
+  transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* Active Page Indicator */
+nav .nav-indicator {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #3b82f6;
+  transition: width 0.3s ease;
+}
+
+/* Hiring Link Badge */
+.notification-badge {
+  background-color: #3b82f6;
+  color: white;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.25rem;
+  height: 1.25rem;
+  font-size: 0.75rem;
+}
+
+/* Social Media Icons */
+.social-icon {
+  color: #000000;
+  transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+  color: #020fff;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 6rem 0;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.hero a {
+  background-color: #3b82f6;
+  color: #fff;
+  padding: 0.75rem 2rem;
+  border-radius: 9999px;
+  transition: background-color 0.3s ease;
+}
+
+.hero a:hover {
+  background-color: #2563eb;
+}
+
+/* About styles */
+#about {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
+#about h2 {
+  color: #333;
+}
+
+#about img {
+  max-width: 100%;
+}
+
+#about h3 {
+  color: #333;
+}
+
+#about p {
+  line-height: 1.6;
+}
+
+#about ul {
+  padding-left: 1.25rem;
+}
+
+/* Feature Cards */
+.feature-card {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.feature-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.25rem;
+  margin-bottom: 1rem;
+}
+
+.feature-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.feature-card p {
+  color: #666;
+}
+
+/* Newsletter Section */
+#newsletter {
+  background-color: #f9f9f9;
+  padding: 6rem 0;
+  text-align: center;
+}
+
+#newsletter h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+#newsletter p {
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+/* Footer Section */
+.footer-nav {
+  background-color: #eff2f7;
+  position: static;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+  padding: 1rem 0;
+}
+
+.footer-nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-nav a {
+  color: #000000;
+  text-decoration: none;
+  margin: 0 1rem;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.footer-nav a:hover {
+  color: #0849eb;
+}
+
+.footer-nav a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #980303;
+  transition: width 0.3s ease;
+}
+
+.footer-nav a:hover::after {
+  width: 100%;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  /* Add responsive styles here if needed */
+}
+
+/* Overlay for Text Contrast */
+.hero .absolute {
+  z-index: -1;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .hero {
+    padding: 4rem 1rem;
+  }
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+}
